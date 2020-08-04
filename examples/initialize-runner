@@ -1,3 +1,5 @@
+#####
+
 docker run --rm -t -i \
   -v /srv/gitlab-runner/config:/etc/gitlab-runner \
   --name gitlab-runner \
@@ -12,3 +14,11 @@ docker run --rm -t -i \
   --tag-list "docker" \
   --run-untagged \
   --locked="false"
+
+#####
+
+docker run -d --name gitlab-runner --restart always \
+  -v /srv/gitlab-runner/config:/etc/gitlab-runner \
+  -v /var/run/docker.sock:/var/run/docker.sock \
+  --name gitlab-runner \
+  gitlab/gitlab-runner
