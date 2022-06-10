@@ -8,7 +8,7 @@ docker run --rm -t -i \
   --executor "docker" \
   --docker-privileged \
   --docker-image docker:latest \
-  --url "https://gitlab.commandemy.training/" \
+  --url "https://gitlab.<ENV-ANIMAL>.commandemy.training/" \
   --registration-token "pCs-UhiwB23ns-_d1yce" \
   --description "docker-runner" \
   --tag-list "docker" \
